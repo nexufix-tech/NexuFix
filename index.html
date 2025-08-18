@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexuFix - Soluções em Tecnologia</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0a2342;
+      color: #fff;
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    section {
+      padding: 60px 10%;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 10%;
+      background: linear-gradient(to right, #0a2342, #143d73);
+      color: #fff;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: #ffd700;
+      color: #0a2342;
+      padding: 12px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #e6c200;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #0a2342;
+    }
+
+    /* PORTFÓLIO */
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .portfolio img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+    }
+
+    /* FORMULÁRIO */
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #0a2342;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    form button {
+      background: #0a2342;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    form button:hover {
+      background: #143d73;
+    }
+
+    /* BOTÃO WHATSAPP */
+    .whatsapp {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .whatsapp a {
+      display: inline-block;
+      background: #25D366;
+      color: #fff;
+      padding: 14px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .whatsapp a:hover {
+      background: #1ebe5d;
+    }
+
+    footer {
+      background: #0a2342;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NexuFix</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Soluções em Tecnologia para Você e Sua Empresa</h2>
+    <p>Cuidamos do seu computador como se fosse nosso!</p>
+    <a href="#contato" class="btn">Entre em Contato</a>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>A <strong>NexuFix</strong> é especializada em soluções de tecnologia, oferecendo serviços de manutenção, upgrades e suporte de confiança. Nosso objetivo é garantir que seus dispositivos estejam sempre funcionando com máxima eficiência.</p>
+  </section>
+
+  <section id="servicos">
+    <h2>Serviços</h2>
+    <div class="services">
+      <div class="card">
+        <h3>🔧 Manutenção</h3>
+        <p>Preventiva e corretiva para computadores e notebooks.</p>
+      </div>
+      <div class="card">
+        <h3>💾 Formatação</h3>
+        <p>Formatação sem perda de arquivos importantes.</p>
+      </div>
+      <div class="card">
+        <h3>⚡ Upgrade</h3>
+        <p>Instalação de SSD, RAM e componentes de alta performance.</p>
+      </div>
+      <div class="card">
+        <h3>✅ Suporte</h3>
+        <p>Soluções rápidas e confiáveis para seu dia a dia.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfólio</h2>
+    <p>Alguns dos nossos trabalhos realizados:</p>
+    <div class="portfolio">
+      <img src="https://via.placeholder.com/400x250.png?text=Upgrade+de+SSD" alt="Trabalho 1">
+      <img src="https://via.placeholder.com/400x250.png?text=Limpeza+e+Manutenção" alt="Trabalho 2">
+      <img src="https://via.placeholder.com/400x250.png?text=Suporte+Técnico" alt="Trabalho 3">
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Entre em Contato</h2>
+    <p>Preencha o formulário abaixo ou fale direto pelo WhatsApp 🚀</p>
+
+    <!-- FORMULÁRIO FORMESPREE -->
+    <form action="https://formspree.io/f/mblkeqzb" method="POST">
+      <label for="nome">Nome:</label>
+      <input type="text" name="nome" id="nome" required>
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea name="mensagem" id="mensagem" rows="5" required></textarea>
+
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+
+    <!-- BOTÃO WHATSAPP -->
+    <div class="whatsapp">
+      <a href="https://wa.me/5512991363985" target="_blank">💬 Falar no WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 NexuFix - Soluções em Tecnologia | Desenvolvido com 💻</p>
+  </footer>
+</body>
+</html>
