@@ -159,24 +159,28 @@
       background: #143d73;
     }
 
-    /* BOTÃO WHATSAPP */
-    .whatsapp {
-      text-align: center;
-      margin-top: 20px;
+    /* BOTÃO WHATSAPP FLUTUANTE */
+    .whatsapp-fixo {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 10000;
     }
 
-    .whatsapp a {
+    .whatsapp-fixo a {
       display: inline-block;
       background: #25D366;
       color: #fff;
-      padding: 14px 25px;
-      border-radius: 8px;
+      padding: 16px 20px;
+      border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1rem;
+      font-size: 1.2rem;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s;
     }
 
-    .whatsapp a:hover {
+    .whatsapp-fixo a:hover {
       background: #1ebe5d;
     }
 
@@ -246,15 +250,15 @@
     <h2>Portfólio</h2>
     <p>Alguns dos nossos trabalhos realizados:</p>
     <div class="portfolio">
-      <img src="Trabalho 1.jpeg">
-      <img src="Trabalho 2.jpeg">
-      <img src="Trabalho 3.jpeg">
+      <img src="Trabalho 1.jpeg" alt="Trabalho 1">
+      <img src="Trabalho 2.jpeg" alt="Trabalho 2">
+      <img src="Trabalho 3.jpeg" alt="Trabalho 3">
     </div>
   </section>
 
   <section id="contato">
     <h2>Entre em Contato</h2>
-    <p>Preencha o formulário abaixo ou fale direto pelo WhatsApp 🚀</p>
+    <p>Preencha o formulário abaixo:</p>
 
     <!-- FORMULÁRIO FORMESPREE -->
     <form action="https://formspree.io/f/mblkeqzb" method="POST">
@@ -269,16 +273,16 @@
 
       <button type="submit">Enviar Mensagem</button>
     </form>
-
-    <!-- BOTÃO WHATSAPP -->
-    <div class="whatsapp">
-      <a href="https://wa.me/5512991363985" target="_blank">💬 Falar no WhatsApp</a>
-    </div>
   </section>
 
   <footer>
     <p>&copy; 2025 NexuFix - Soluções em Tecnologia | Desenvolvido por NexuFix</p>
   </footer>
+
+  <!-- BOTÃO WHATSAPP FLUTUANTE -->
+  <div class="whatsapp-fixo">
+    <a href="https://wa.me/5512991363985" target="_blank">💬 WhatsApp</a>
+  </div>
 </body>
 </html>
 
