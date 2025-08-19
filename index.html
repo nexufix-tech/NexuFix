@@ -22,7 +22,7 @@
     header {
       background: #0a2342;
       color: #fff;
-      padding: 20px 10%;
+      padding: 15px 10%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -32,18 +32,18 @@
     }
 
     header h1 {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
 
     nav {
       display: flex;
       align-items: center;
+      gap: 15px;
     }
 
     nav a {
       color: #fff;
       text-decoration: none;
-      margin-left: 20px;
       font-weight: bold;
     }
 
@@ -57,12 +57,17 @@
       border: none;
       font-size: 1.4rem;
       cursor: pointer;
-      margin-left: 15px;
       color: #ffd700;
     }
 
-    section {
-      padding: 60px 10%;
+    /* Botão Menu (Mobile) */
+    #menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #ffd700;
     }
 
     .hero {
@@ -95,6 +100,10 @@
       background: #e6c200;
     }
 
+    section {
+      padding: 60px 10%;
+    }
+
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -120,7 +129,6 @@
       color: #0a2342;
     }
 
-    /* PORTFÓLIO */
     .portfolio {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -134,7 +142,6 @@
       box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
     }
 
-    /* FORMULÁRIO */
     form {
       max-width: 600px;
       margin: auto;
@@ -175,7 +182,6 @@
       background: #143d73;
     }
 
-    /* BOTÃO WHATSAPP FLUTUANTE */
     .whatsapp-fixo {
       position: fixed;
       bottom: 20px;
@@ -213,7 +219,7 @@
       text-decoration: underline;
     }
 
-    /* --- Dark Mode Styles --- */
+    /* Dark Mode */
     body.dark-mode {
       background: #1a1a1a;
       color: #f9f9f9;
@@ -247,12 +253,81 @@
     body.dark-mode footer {
       background: #111;
     }
+
+    /* --- Responsividade --- */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 5%;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #0a2342;
+        width: 100%;
+        padding: 15px 0;
+        margin-top: 10px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        margin: 10px 0;
+        font-size: 1rem;
+      }
+
+      #menu-toggle {
+        display: block;
+      }
+
+      .hero {
+        padding: 60px 5%;
+      }
+
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      section {
+        padding: 40px 5%;
+      }
+
+      .services, .portfolio {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+
+      .hero p {
+        font-size: 0.9rem;
+      }
+
+      .btn {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+      }
+
+      form input, form textarea {
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>NexuFix</h1>
-    <nav>
+    <button id="menu-toggle">☰</button>
+    <nav id="menu">
       <a href="#sobre">Sobre</a>
       <a href="#servicos">Serviços</a>
       <a href="#portfolio">Portfólio</a>
@@ -269,7 +344,7 @@
 
   <section id="sobre">
     <h2>Sobre Nós</h2>
-    <p>A <strong>NexuFix</strong> é especializada em soluções de tecnologia, oferecendo serviços de manutenção de computadores e notebooks, upgrades e suporte de confiança, desenvolvimento de sites e consultoria. Nosso objetivo é garantir que seus dispositivos estejam sempre funcionando com máxima eficiência.</p>
+    <p>A <strong>NexuFix</strong> é especializada em soluções de tecnologia, oferecendo serviços de manutenção de computadores e notebooks, upgrades e suporte de confiança, desenvolvimento de sites e consultoria.</p>
   </section>
 
   <section id="servicos">
@@ -306,8 +381,6 @@
 
   <section id="contato">
     <h2>Entre em Contato</h2>
-    <p>Preencha o formulário abaixo:</p>
-
     <form action="https://formspree.io/f/mblkeqzb" method="POST">
       <label for="nome">Nome:</label>
       <input type="text" name="nome" id="nome" required>
@@ -348,6 +421,11 @@
         document.getElementById('dark-toggle').textContent = "☀️";
       }
     }
+
+    // Menu hamburguer
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+      document.getElementById("menu").classList.toggle("active");
+    });
   </script>
 </body>
 </html>
